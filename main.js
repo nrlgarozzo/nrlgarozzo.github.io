@@ -6,8 +6,8 @@ let myResolve;
 let myReject;
 
 const csvready = new Promise((resolve, reject) => {
-  myResolve() = resolve; 
-  myReject() = reject;
+  myResolve = resolve; 
+  myReject = reject;
 }); //defining a constant with three states: pending, fulfilled, rejected
 
 Papa.parse("ape.csv", {
