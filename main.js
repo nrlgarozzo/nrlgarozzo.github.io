@@ -23,8 +23,8 @@ function initializeMeta(meta) {
       csv_meta = meta;
     }
 
-console.log(csv_data[5])
-console.log(csv_data[5]['kword'])
+console.log(csv_data[0])
+console.log(csv_data[0]['kword'])
 console.log(csv_meta)
 
 
