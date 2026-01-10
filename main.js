@@ -2,6 +2,8 @@ console.log("main.js loaded");
 
 let csv_data; //loads empty variable
 let csv_meta;
+let myResolve;
+let myReject;
 
 const csvready = new Promise(function(myResolve, myReject) {myResolve(); myReject();}); //defining a constant with three states: pending, fulfilled, rejected
 
