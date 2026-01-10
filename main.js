@@ -1,12 +1,14 @@
 console.log("main.js loaded");
 
 let csv_data; //loads empty variable
+let csv_meta;
 
 Papa.parse("ape.csv", {
   download: true,
   header: true,
   complete: function(results) {
-    initializeNodes(results.data);
+    initializeData(results.data);
+    initializeMeta(results.meta);
     
   }
 });
@@ -14,11 +16,16 @@ Papa.parse("ape.csv", {
 let randomNum = Math.random();
 console.log(randomNum);
 
-function initializeNodes(data) {
+function initializeData(data) {
       csv_data = data;
     }
+function initializeMeta(meta) {
+      csv_meta = meta;
+    }
 
-console.log(csv_data)
+console.log(csv_data[5])
+console.log(csv_data[5]['kword'])
+console.log(csv_meta)
 
 
 const sound = new Howl({
