@@ -7,7 +7,7 @@ Papa.parse("ape.csv", {
     const data = results.data;
     const meta = results.meta;
     
-    console.log(meta);
+    console.log(data);
   }
 });
 
