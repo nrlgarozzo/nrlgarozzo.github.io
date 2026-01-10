@@ -4,17 +4,17 @@ Papa.parse("ape.csv", {
   download: true,
   header: true,
   complete: function(results) {
-    const data = results.data;
-    const meta = results.meta;
+    initializeNodes(results.data);
     
-    console.log(data);
   }
 });
 
 let randomNum = Math.random();
 console.log(randomNum);
 
-console.log(data);
+function initializeNodes(data) {
+      data.forEach(row => console.log(row));
+    }
 
 
 const sound = new Howl({
