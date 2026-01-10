@@ -5,7 +5,10 @@ let csv_meta;
 let myResolve;
 let myReject;
 
-const csvready = new Promise(function(myResolve, myReject) {myResolve(); myReject();}); //defining a constant with three states: pending, fulfilled, rejected
+const csvready = new Promise((resolve, reject) => {
+  myResolve() = resolve; 
+  myReject() = reject;
+}); //defining a constant with three states: pending, fulfilled, rejected
 
 Papa.parse("ape.csv", {
   download: true,
