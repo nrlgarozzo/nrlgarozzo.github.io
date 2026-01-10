@@ -4,6 +4,7 @@ let csv_data; //loads empty variable
 let csv_meta;
 let myResolve;
 let myReject;
+let link;
 
 const csvready = new Promise((resolve, reject) => {
   myResolve = resolve; 
@@ -28,7 +29,10 @@ async function gen_link(chart_size) {
       await csvready
       var randomNum = Math.floor(Math.random() * chart_size);
       console.log(randomNum);
-      console.log(csv_data[randomNum]['kword']) 
+      //console.log(csv_data[randomNum]['kword']); 
+
+      link = 'https://www.howtopronounce.com/search/korean/' + csv_data[randomNum]['kword'];
+      console.log(link);
 
   //this function should:
   //generate the random number
@@ -46,7 +50,6 @@ gen_link(csize)
 
 //a helper function which parses the backend to find the audio link
 
-bruh()
 
 
 
@@ -69,7 +72,10 @@ function playsound() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".button-b");
-  button.addEventListener("click", playsound);
+  //button.addEventListener("click", playsound);
+  button.addEventListener("click", function () {
+    window.location.href = link;
+  });
 });
 
 
