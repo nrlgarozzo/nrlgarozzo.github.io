@@ -12,4 +12,4 @@ function playsound() {
   sound.play();
 }
 
-document.querySelector("button-b").addEventListener("click", playsound)
+document.querySelector(".button-b").addEventListener("click", playsound)
