@@ -4,7 +4,7 @@ import { Howl } from "https://unpkg.com/howler@2.2.4/dist/howler.module.js";
 
 const sound = new Howl({
   //src: ["https://ko-audio.howtopronounce.com/26ce399e723333542fa6a4c798b8879b.mp3"], 
-  srs: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
+  src: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
   preload: true, 
   html5: false,
 });
@@ -17,10 +17,10 @@ function playsound() {
 
 //document.querySelector(".button-b").addEventListener("click", playsound)
 
-document.addEventListener("DOMContentLoaded", function () => {
+document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".button-b");
   //button.addEventListener("click", playSound);
-  button.addEventListener("click", function () {
+  button.addEventListener("click", () => {
                 // Redirect to another page
                 window.location.href = "https://www.youtube.com";
             });
