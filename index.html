@@ -5,38 +5,14 @@
   <meta charset="UTF-8" />
   <title>Audio Test</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="main.js"></script>
 </head>
 <body>
-
-  <audio controls>
-    <source src="https://ko-audio.howtopronounce.com/175612790468ac62a0be934.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
   
   <button class="button-b">B</button>
 
-<script>
-  const sound = new Howl({
-  src: ["https://ko-audio.howtopronounce.com/26ce399e723333542fa6a4c798b8879b.mp3"], 
-  //src: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
-  preload: true, 
-  html5: false,
-});
 
-//document.getElementById("play").onclick = () => sound.play();
-
-function playsound() {
-  sound.play();
-}
-
-//document.querySelector(".button-b").addEventListener("click", playsound)
-
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector(".button-b");
-  button.addEventListener("click", playsound);
-});
-
-</script>
 
 
 
