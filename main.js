@@ -1,3 +1,5 @@
+console.log("main.js loaded");
+
 Papa.parse("ape.csv", {
   download: true,
   header: true,
