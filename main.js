@@ -3,6 +3,14 @@ console.log("main.js loaded");
 let csv_data; //loads empty variable
 let csv_meta;
 
+function initializeData(data) {
+      csv_data = data;
+    }
+
+function initializeMeta(meta) {
+      csv_meta = meta;
+    }
+
 Papa.parse("ape.csv", {
   download: true,
   header: true,
@@ -15,17 +23,6 @@ Papa.parse("ape.csv", {
 
 let randomNum = Math.random();
 console.log(randomNum);
-let arn = Math.random();
-console.log(arn);
-
-function initializeData(data) {
-      csv_data = data;
-    }
-
-
-function initializeMeta(meta) {
-      csv_meta = meta;
-    }
 
 console.log(csv_data);
 //console.log(csv_data[0])
