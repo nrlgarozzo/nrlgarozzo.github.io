@@ -25,3 +25,9 @@
 //                window.location.href = "https://www.youtube.com";
 //            });
 //});
+
+
+
+
+//notes
+//https://docs.google.com/spreadsheets/d/16pRPe1aNRoQbcihSBkGs5La5b59gQ0bCq1-ss09pgFI/edit?gid=0#gid=0
