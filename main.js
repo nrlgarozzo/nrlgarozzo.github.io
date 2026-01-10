@@ -14,6 +14,8 @@ Papa.parse("ape.csv", {
 let randomNum = Math.random();
 console.log(randomNum);
 
+console.log(data);
+
 
 const sound = new Howl({
   src: ["https://ko-audio.howtopronounce.com/26ce399e723333542fa6a4c798b8879b.mp3"], 
