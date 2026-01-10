@@ -1,5 +1,7 @@
 console.log("main.js loaded");
 
+let csv_data; //loads empty variable
+
 Papa.parse("ape.csv", {
   download: true,
   header: true,
@@ -13,8 +15,10 @@ let randomNum = Math.random();
 console.log(randomNum);
 
 function initializeNodes(data) {
-      data.forEach(row => console.log(row));
+      csv_data = data;
     }
+
+console.log(csv_data)
 
 
 const sound = new Howl({
