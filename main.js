@@ -5,7 +5,7 @@ let csv_meta;
 
 function CallBack() {
       console.log(csv_data);
-      console.log(csv_data[0])
+      console.log(csv_data[0]['kword'])
 }
 
 Papa.parse("ape.csv", {
