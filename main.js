@@ -6,4 +6,8 @@ const sound = new Howl({
 
 //document.getElementById("play").onclick = () => sound.play();
 
-document.querySelector(".button-b").addEventListener("click, () => {sound.play()}")
+function playsound() {
+  sound.play();
+}
+
+document.querySelector(".button-b").addEventListener("click", playsound)
