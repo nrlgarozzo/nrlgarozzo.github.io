@@ -8,7 +8,7 @@ Papa.parse("ape.csv", {
   header: true,
   complete: function(results) {
     initializeData(results.data);
-    initializeMeta(results.meta);
+    //initializeMeta(results.meta);
     
   }
 });
@@ -19,6 +19,8 @@ console.log(randomNum);
 function initializeData(data) {
       csv_data = data;
     }
+
+
 function initializeMeta(meta) {
       csv_meta = meta;
     }
