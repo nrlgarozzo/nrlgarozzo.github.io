@@ -1,3 +1,22 @@
+Papa.parse("ape.csv", {
+  download: true,
+  header: true,
+  complete: function(results) {
+    const data = results.data;
+
+    // Example: turn CSV rows into variables
+    const config = {};
+    data.forEach(row => {
+      config[row.name] = row.value;
+    });
+
+    console.log(config);
+    // config.volume === "0.8"
+    // config.tempo === "120"
+  }
+});
+
+
 const sound = new Howl({
   src: ["https://ko-audio.howtopronounce.com/26ce399e723333542fa6a4c798b8879b.mp3"], 
   //src: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
