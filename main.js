@@ -3,16 +3,9 @@ Papa.parse("ape.csv", {
   header: true,
   complete: function(results) {
     const data = results.data;
-
-    // Example: turn CSV rows into variables
-    const config = {};
-    data.forEach(row => {
-      config[row.name] = row.value;
-    });
-
-    console.log(config);
-    // config.volume === "0.8"
-    // config.tempo === "120"
+    const meta = results.meta;
+    
+    console.log(meta);
   }
 });
 
