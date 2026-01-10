@@ -15,6 +15,8 @@ Papa.parse("ape.csv", {
 
 let randomNum = Math.random();
 console.log(randomNum);
+let randomNum = Math.random();
+console.log(randomNum);
 
 function initializeData(data) {
       csv_data = data;
