@@ -2,9 +2,8 @@ console.log("main.js loaded");
 
 let csv_data; //loads empty variable
 let csv_meta;
-let csvResolve;
 
-const csvready = new Promise(resolve => {csvResolve = resolve;}); //defining a constant with three states: pending, fulfilled, rejected
+const csvready = new Promise(function(myResolve, myReject) {myResolve(); myReject();}); //defining a constant with three states: pending, fulfilled, rejected
 
 Papa.parse("ape.csv", {
   download: true,
@@ -13,7 +12,7 @@ Papa.parse("ape.csv", {
     csv_data = results.data;
     csv_meta = results.meta;
 
-    csvResolve(); //this function switches csvready to the  'fulfilled' state and tells the other functions to proceed which are waiting
+    myResolve(); //this function switches csvready to the  'fulfilled' state and tells the other functions to proceed which are waiting
     
   }
 });
