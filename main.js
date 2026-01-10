@@ -3,7 +3,8 @@ import { Howl } from "https://unpkg.com/howler@2.2.4/dist/howler.module.js";
 //console.log("Button found?", document.querySelector(".button-b"));
 
 const sound = new Howl({
-  src: ["https://ko-audio.howtopronounce.com/26ce399e723333542fa6a4c798b8879b.mp3"], 
+  //src: ["https://ko-audio.howtopronounce.com/26ce399e723333542fa6a4c798b8879b.mp3"], 
+  srs: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
   preload: true, 
   html5: false,
 });
