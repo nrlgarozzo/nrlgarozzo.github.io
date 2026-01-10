@@ -12,4 +12,9 @@ function playsound() {
   sound.play();
 }
 
-document.querySelector(".button-b").addEventListener("click", playsound)
+//document.querySelector(".button-b").addEventListener("click", playsound)
+
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".button-b");
+  button.addEventListener("click", playSound);
+});
