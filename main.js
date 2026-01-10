@@ -24,9 +24,9 @@ function initializeMeta(meta) {
     }
 
 console.log(csv_data)
-console.log(csv_data[0])
-console.log(csv_data[0]['kword'])
-console.log(csv_meta)
+//console.log(csv_data[0])
+//console.log(csv_data[0]['kword'])
+//console.log(csv_meta)
 
 
 const sound = new Howl({
