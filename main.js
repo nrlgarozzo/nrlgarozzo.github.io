@@ -22,21 +22,34 @@ Papa.parse("ape.csv", {
   }
 });
 
-//let randomNum = Math.random();
-//console.log(randomNum);
+const csize = 16; // defines the chart size
 
-async function bruh() {
+async function gen_link(chart_size) {
       await csvready
-      console.log(csv_data);
-      console.log(csv_data[0]['kword'])
+      var randomNum = Math.floor(Math.random() * chart_size);
+      console.log(randomNum);
+      console.log(csv_data[randomNum]['kword']) 
+
+  //this function should:
+  //generate the random number
+  //output the corresponding link
 }
+
+gen_link(csize)
+
+//function _find_mp3(link) {
+
+  
+//}
+
+//another function for recalling the audio sample
+
+//a helper function which parses the backend to find the audio link
 
 bruh()
 
-//console.log(csv_data);
-//console.log(csv_data[0])
-//console.log(csv_data[0]['kword'])
-//console.log(csv_meta)
+
+
 
 
 //generate new key
