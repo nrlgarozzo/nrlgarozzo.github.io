@@ -17,7 +17,11 @@ function playsound() {
 
 //document.querySelector(".button-b").addEventListener("click", playsound)
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () => {
   const button = document.querySelector(".button-b");
-  button.addEventListener("click", playSound);
+  //button.addEventListener("click", playSound);
+  button.addEventListener("click", function () {
+                // Redirect to another page
+                window.location.href = "https://www.youtube.com";
+            });
 });
