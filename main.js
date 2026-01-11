@@ -31,7 +31,7 @@ async function gen_link(chart_size) {
       console.log(randomNum);
       //console.log(csv_data[randomNum]['kword']); 
 
-      link = 'https://www.howtopronounce.com/search/korean/' + csv_data[randomNum]['kword'];
+      link = 'https://www.howtopronounce.com/korean/' + csv_data[randomNum]['kword'];
       console.log(link);
 
   //this function should:
@@ -72,10 +72,7 @@ function playsound() {
 
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".button-b");
-  //button.addEventListener("click", playsound);
-  button.addEventListener("click", function () {
-    window.location.href = link;
-  });
+  button.addEventListener("click", playsound);
 });
 
 
