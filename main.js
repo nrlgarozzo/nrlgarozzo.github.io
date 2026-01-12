@@ -29,10 +29,9 @@ const csize = 103; // defines the chart size
 async function gen_link(col_size) {
       await csvready
       var randomNum = Math.floor(Math.random() * col_size);
-      console.log(randomNum);
-      //console.log(csv_data[randomNum]['kword']); 
 
       console.log(csv_data[randomNum]['kword']);
+      console.log(csv_data[randomNum]['engexp'])
 
       return csv_data[randomNum]['mp3'];
 
