@@ -38,8 +38,8 @@ async function gen_link(col_size) {
 
 }
 
-var randomNum = Math.random();
-console.log(randomNum);
+//var randomNum = Math.random();
+//console.log(randomNum);
 
 
 async function newsound() {
