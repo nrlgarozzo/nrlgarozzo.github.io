@@ -50,12 +50,12 @@ const sound = new Howl({
 });
 
 function playnew() {
-  gen_link(csize)
+  gen_link(csize);
   sound.play();
 }
 
 function playsound() {
-  sound.play()
+  sound.play();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
