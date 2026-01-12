@@ -49,12 +49,12 @@ const sound = new Howl({
   html5: false,
 });
 
-function playnew {
+function playnew() {
   gen_link(csize)
   sound.play();
 }
 
-function playsound {
+function playsound() {
   sound.play()
 }
 
