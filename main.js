@@ -32,47 +32,28 @@ async function gen_link(chart_size) {
       //console.log(csv_data[randomNum]['kword']); 
 
       link = 'https://www.howtopronounce.com/korean/' + csv_data[randomNum]['kword'];
-      console.log(link);
+      console.log(csv_data[randomNum]['kword']);
 
   //this function should:
   //generate the random number
   //output the corresponding link
 }
 
-gen_link(csize)
-
-//function _find_mp3(link) {
-
-  
-//}
-
-//another function for recalling the audio sample
-
-//a helper function which parses the backend to find the audio link
-
-
-
-
-
-
-//generate new key
-//repeat sound button
-//give answer button
 
 const sound = new Howl({
-  src: ["https://ko-audio.howtopronounce.com/26ce399e723333542fa6a4c798b8879b.mp3"], 
-  //src: ["https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"],
+  src: [link], 
   preload: true, 
   html5: false,
 });
 
-function playsound() {
+function playsound(csize) {
+  gen_link(csize)
   sound.play();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".button-b");
-  button.addEventListener("click", playsound);
+  button.addEventListener("click", playsound(csize));
 });
 
 
