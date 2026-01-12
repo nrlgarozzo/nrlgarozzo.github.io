@@ -23,7 +23,7 @@ Papa.parse("ape.csv", {
   }
 });
 
-const csize = 16; // defines the chart size
+const csize = 103; // defines the chart size
 
 async function gen_link(chart_size) {
       await csvready
@@ -31,13 +31,16 @@ async function gen_link(chart_size) {
       console.log(randomNum);
       //console.log(csv_data[randomNum]['kword']); 
 
-      link = 'https://www.howtopronounce.com/korean/' + csv_data[randomNum]['kword'];
+      link = csv_data[randomNum]['kword'];
       console.log(csv_data[randomNum]['kword']);
 
   //this function should:
   //generate the random number
   //output the corresponding link
 }
+
+var randomNum = Math.random(); //for testing
+console.log(randomNum);
 
 
 const sound = new Howl({
@@ -46,14 +49,14 @@ const sound = new Howl({
   html5: false,
 });
 
-function playsound(csize) {
+function playsound {
   gen_link(csize)
   sound.play();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector(".button-b");
-  button.addEventListener("click", playsound(csize));
+  button.addEventListener("click", playsound);
 });
 
 
