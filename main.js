@@ -2,14 +2,15 @@ console.log("main.js loaded");
 
 let csv_data; //loads empty variable
 let csv_meta;
-let myResolve;
-let myReject;
-let link;
+let csvResolve;
+let csvReject;
+let link = null;
 
 const csvready = new Promise((resolve, reject) => {
-  myResolve = resolve; 
-  myReject = reject;
+  csvResolve = resolve; 
+  csvReject = reject;
 }); //defining a constant with three states: pending, fulfilled, rejected
+
 
 Papa.parse("ape.csv", {
   download: true,
@@ -18,46 +19,44 @@ Papa.parse("ape.csv", {
     csv_data = results.data;
     csv_meta = results.meta;
 
-    myResolve(); //this function switches csvready to the  'fulfilled' state and tells the other functions to proceed which are waiting
+    csvResolve(); //this function switches csvready to the  'fulfilled' state and tells the other functions to proceed which are waiting
     
   }
 });
 
 const csize = 103; // defines the chart size
 
-async function gen_link(chart_size) {
+async function gen_link(col_size) {
       await csvready
-      var randomNum = Math.floor(Math.random() * chart_size);
+      var randomNum = Math.floor(Math.random() * col_size);
       console.log(randomNum);
       //console.log(csv_data[randomNum]['kword']); 
 
-      link = csv_data[randomNum]['mp3'];
       console.log(csv_data[randomNum]['kword']);
 
-  //this function should:
-  //generate the random number
-  //output the corresponding link
+      return csv_data[randomNum]['mp3'];
+
 }
 
+var randomNum = Math.random();
+console.log(randomNum);
 
-const sound = new Howl({
-  src: [link], 
-  preload: true, 
-  html5: false,
-});
 
-function playnew() {
-  gen_link(csize);
-  sound.play();
+async function newsound() {
+  link = await gen_link(csize)
 }
 
 function playsound() {
-  sound.play();
+  if (!link) {
+    throw new Error('sound not ready')
+  }
+  new Howl({ src: [link] }).play();
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttonb = document.querySelector(".button-b");
-  buttonb.addEventListener("click", playnew);
+  buttonb.addEventListener("click", newsound);
   const buttonc = document.querySelector(".button-c");
   buttonc.addEventListener("click", playsound);
 });
