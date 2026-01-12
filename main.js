@@ -39,9 +39,6 @@ async function gen_link(chart_size) {
   //output the corresponding link
 }
 
-var randomNum = Math.random(); //for testing
-console.log(randomNum);
-
 
 const sound = new Howl({
   src: [link], 
