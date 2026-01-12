@@ -31,7 +31,7 @@ async function gen_link(chart_size) {
       console.log(randomNum);
       //console.log(csv_data[randomNum]['kword']); 
 
-      link = csv_data[randomNum]['kword'];
+      link = csv_data[randomNum]['mp3'];
       console.log(csv_data[randomNum]['kword']);
 
   //this function should:
