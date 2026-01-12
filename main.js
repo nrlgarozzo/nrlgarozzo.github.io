@@ -49,14 +49,20 @@ const sound = new Howl({
   html5: false,
 });
 
-function playsound {
+function playnew {
   gen_link(csize)
   sound.play();
 }
 
+function playsound {
+  sound.play()
+}
+
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector(".button-b");
-  button.addEventListener("click", playsound);
+  const buttonb = document.querySelector(".button-b");
+  buttonb.addEventListener("click", playnew);
+  const buttonc = document.querySelector(".button-c");
+  buttonc.addEventListener("click", playsound);
 });
 
 
