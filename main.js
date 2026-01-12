@@ -50,7 +50,8 @@ function playsound() {
   if (!link) {
     throw new Error('sound not ready')
   }
-  new Howl({ src: [link] }).play();
+  const sound = new Howl({ src: [link], html5: true, preload: true});
+  sound.play()
 }
 
 
